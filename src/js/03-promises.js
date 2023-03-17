@@ -24,8 +24,10 @@ function onSubmit(e) {
   let stepInput = +step.value;
   let amountInput = +amount.value;
 
-  for (i = 1; i <= amountInput; i += 1) {
-    createPromise(i, delayInput)
+  let position = 0;
+
+  for (position = 1; position <= amountInput; position += 1) {
+    createPromise(position, delayInput)
     .then(({ position, delay }) => {
       Notify.success(` Fulfilled promise ${position} in ${delay}ms`);
     })
