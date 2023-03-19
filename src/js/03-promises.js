@@ -23,7 +23,6 @@ function onSubmit(e) {
   let delayInput = +delay.value;
   let stepInput = +step.value;
   let amountInput = +amount.value;
-
   let position = 0;
 
   for (position = 1; position <= amountInput; position += 1) {
